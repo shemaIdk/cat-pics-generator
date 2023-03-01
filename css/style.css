@@ -9,19 +9,22 @@ html {
 body {
 	font-family: 'Open Sans';
 	background: royalblue;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
 }
 
 header {
-	position: absolute;
 	top: 5px;
 	width: 100%;
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
-	right: 15px;
+  margin-top: auto;
 	color: #fff;
+  text-align: end;
+  padding: 4px;
 }
 
 .title {
@@ -30,12 +33,15 @@ header {
 	font-size: 1.7rem;
 }
 
+.main {
+  margin-top: auto;
+}
+
 .cat-wrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 }
 
 .cat-img-container {
@@ -58,6 +64,9 @@ header {
 .cat-buttons {
 	display: flex;
 	gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .cat-button {
@@ -80,6 +89,7 @@ header {
 
 .author {
   font-style: italic;
+  font-size: 0.7rem;
 }
 
 @media screen and (max-width: 380px) {
@@ -101,14 +111,5 @@ header {
 @media screen and (min-height: 1000px) {
 	.cat-img-container {
 		height: 700px;
-	}
-}
-@media screen and (max-height: 600px) {
-	.header {
-		position: relative;
-	}
-	.cat-wrapper {
-		height: auto;
-		margin-top: 20px;
 	}
 }
