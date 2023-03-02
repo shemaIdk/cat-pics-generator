@@ -128,3 +128,12 @@ header {
 		height: 700px;
 	}
 }
+
+/* remove the blue highlight of button on mobile */
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
