@@ -9,7 +9,6 @@ html {
 
 .container {
   padding: 0 20px;
-	background: royalblue;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -19,11 +18,13 @@ html {
 
 body {
 	font-family: 'Open Sans';
+	background: royalblue;
 }
 
-header {
+.header {
   padding-top: 10px;
 	width: 100%;
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -96,8 +97,11 @@ header {
   width: 130px;
   opacity: 1;
   transition: box-shadow 0.1s;
+  user-select: none;
+
 }
 .cat-button:active {
+  user-select: none;
   box-shadow: 0 0 10px 5px rgba(255, 105, 180, .5);
 }
 
@@ -113,7 +117,6 @@ header {
 }
 
 @media screen and (max-width: 700px) {
-	
   .img {
     height: 100%;
   }
