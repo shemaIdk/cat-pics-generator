@@ -2,11 +2,6 @@
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-html {
-	font-size: calc(16px + 0.390625vw);
-}
-
-
 .container {
   padding: 0 20px;
   display: flex;
@@ -14,7 +9,6 @@ html {
   flex-direction: column;
   height: 100vh;
 }
-
 
 body {
 	font-family: 'Open Sans';
@@ -28,7 +22,6 @@ body {
 }
 
 .footer {
-  margin-top: auto;
 	color: #fff;
   text-align: end;
   padding: 4px;
@@ -37,11 +30,11 @@ body {
 .title {
 	text-align: center;
 	color: #fff;
-	font-size: 1.7rem;
+	font-size: 2em;
 }
 
 .main {
-  margin-top: auto;
+  margin: auto 0;
 }
 
 .cat-wrapper {
@@ -84,7 +77,7 @@ body {
   background-color: #ff69b4;
   border: none;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1em;
   box-shadow: 0 0 10px 2px rgba(255, 105, 180, .5);
   font-weight: 600;
   outline: none;
@@ -95,24 +88,24 @@ body {
   cursor: pointer;
   height: 45px;
   width: 130px;
-  opacity: 1;
-  transition: box-shadow 0.1s;
+  transition: all 0.3s;
   user-select: none;
-
 }
+
 .cat-button:active {
   user-select: none;
-  box-shadow: 0 0 10px 5px rgba(255, 105, 180, .5);
+  box-shadow: 0 0 16px 6px rgba(255, 105, 180, .4);
+  opacity: 0.9;
 }
 
 .author {
   font-style: italic;
-  font-size: 0.7rem;
+  font-size: 0.8em;
 }
 
 @media screen and (max-width: 425px) {
   .title {
-    font-size: 6vw;
+    font-size: 1.5em;
   }
 }
 
@@ -120,16 +113,23 @@ body {
   .img {
     height: 100%;
   }
+  html {
+    font-size: 15px;
+  }
 }
-@media screen and (min-width: 1280px) {
-	.cat-img-container {
-		width: 700px;
-	}
-}
-@media screen and (min-height: 1000px) {
-	.cat-img-container {
-		height: 700px;
-	}
+@media screen and (min-width: 1367px) {
+  body {
+    font-size: 20px;
+  }
+  .cat-button {
+    height: 68px;
+    width: 160px;
+  }
+  .cat-img-container {
+    
+    height: 450px;
+    max-height: 450px;
+  }
 }
 
 /* remove the blue highlight of button on mobile */

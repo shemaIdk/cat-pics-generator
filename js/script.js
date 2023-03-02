@@ -1,5 +1,5 @@
 const API_URL = `https://api.thecatapi.com/v1/images/search`
-const LOADING_SVG_PATH = './assets/loading.png';
+const LOADING_SVG_PATH = './assets/images/loading.png';
 
 let isLoading = false;
 
