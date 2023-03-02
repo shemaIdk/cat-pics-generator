@@ -46,13 +46,10 @@
   box-shadow: 0 0 10px 2px rgba(255, 105, 180, .5);
   font-weight: 600;
   outline: none;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 38px;
   cursor: pointer;
-  height: 45px;
-  width: 130px;
+  height: 48px;
+  width: 138px;
   transition: all 0.3s;
   user-select: none;
 }
@@ -60,16 +57,15 @@
 .cat-button:active {
   user-select: none;
   box-shadow: 0 0 16px 6px rgba(255, 105, 180, .4);
-  opacity: 0.9;
+  transform: scale(.95);
 }
 
 @media screen and (min-width: 1367px) {
   .cat-button {
-    height: 68px;
-    width: 160px;
+    height: 72px;
+    width: 168px;
   }
   .cat-img-container {
-    
     height: 450px;
     max-height: 450px;
   }

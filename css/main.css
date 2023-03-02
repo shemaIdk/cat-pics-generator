@@ -32,8 +32,6 @@ body {
 }
 
 .socials {
-  font-style: italic;
-  font-size: 0.8em;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -59,17 +57,14 @@ body {
 }
 
 /* remove the blue highlight of button on mobile */
-input,
-textarea,
 button,
-select,
 a {
     -webkit-tap-highlight-color: transparent;
 }
 
 @media screen and (min-width: 1367px) {
   body {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -78,18 +73,21 @@ a {
     font-size: 15px;
   }
   .socials {
-    justify-content: center;
+    justify-content: center; 
+  }
+  .socials__link-icon {
+    width: 46px;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 468px) {
   .header__title {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 }
 
 @media screen and (max-width: 364px) {
   .header__title {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 }
