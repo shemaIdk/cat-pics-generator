@@ -6,8 +6,9 @@ html {
 	font-size: calc(16px + 0.390625vw);
 }
 
-body {
-	font-family: 'Open Sans';
+
+.container {
+  padding: 0 20px;
 	background: royalblue;
   display: flex;
   justify-content: space-between;
@@ -15,8 +16,13 @@ body {
   height: 100vh;
 }
 
+
+body {
+	font-family: 'Open Sans';
+}
+
 header {
-	top: 5px;
+  padding-top: 10px;
 	width: 100%;
 }
 
@@ -42,23 +48,27 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+  height: 100%;
 }
 
 .cat-img-container {
-	width: 400px;
-	height: 340px;
+  max-width: 100%;
+  height: 350px;
+  max-height: 350px;
 	border-radius: 16px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .cat-img {
-  width: 100%;
-  height: 80%;
-	object-fit: contain;
-	object-position: center;
+  max-width: inherit;
+  max-height: inherit;
+  border-radius: 10px;
+  object-fit: contain;
+  border: 1px solid #ff69b4;
+  box-shadow: 0 0 15px 5px rgba(255,100,180.5);
 }
 
 .cat-buttons {
@@ -70,12 +80,12 @@ header {
 }
 
 .cat-button {
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   border: none;
   color: #fff;
   font-size: 0.8rem;
+  box-shadow: 0 0 10px 2px rgba(255, 105, 180, .5);
   font-weight: 600;
-  position: relative;
   outline: none;
   border-radius: 50px;
   display: flex;
@@ -85,6 +95,10 @@ header {
   height: 45px;
   width: 130px;
   opacity: 1;
+  transition: box-shadow 0.1s;
+}
+.cat-button:active {
+  box-shadow: 0 0 10px 5px rgba(255, 105, 180, .5);
 }
 
 .author {
@@ -92,16 +106,17 @@ header {
   font-size: 0.7rem;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 425px) {
   .title {
-    font-size: 1.2rem;
+    font-size: 6vw;
   }
 }
 
 @media screen and (max-width: 700px) {
-	.cat-img-container {
-		width: 90vw;
-	}
+	
+  .img {
+    height: 100%;
+  }
 }
 @media screen and (min-width: 1280px) {
 	.cat-img-container {
