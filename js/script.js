@@ -47,6 +47,7 @@ function startLoading() {
 function stopLoading() {
 	catImg.style.display = 'block';
 	loadingImg.style.display = 'none';
+	loadingImg.src = ''; // update animation image;
 	generateCatButton.removeAttribute('disabled');
 }
 
