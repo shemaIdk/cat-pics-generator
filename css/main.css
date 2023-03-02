@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+	font-family: 'Open Sans';
+	background: #4169e1;
+}
+
+.container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.header {
+  padding-top: 10px;
+	width: 100%;
+  margin-bottom: 20px;
+}
+
+.header__title {
+	text-align: center;
+	color: #fff;
+	font-size: 2em;
+}
+
+.socials {
+  font-style: italic;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+}
+
+.socials__link {
+  transition: transform 0.2s;
+}
+
+.socials__link:hover {
+  transform: scale(1.1);
+}
+
+.socials__link:active {
+  transform: scale(1.2);
+}
+
+.socials__link-icon {
+  width: 54px;
+}
+
+/* remove the blue highlight of button on mobile */
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (min-width: 1367px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 15px;
+  }
+  .socials {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__title {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .header__title {
+    font-size: 1.6em;
+  }
+}
