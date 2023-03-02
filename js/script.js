@@ -65,3 +65,5 @@ function openImage(url) {
   a.click();
   a.remove();
 }
+
+generateCat();
