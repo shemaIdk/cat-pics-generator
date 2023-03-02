@@ -27,7 +27,7 @@
   border-radius: 10px;
   object-fit: contain;
   border: 1px solid #ff69b4;
-  box-shadow: 0 0 15px 5px rgba(255,100,180.5);
+  box-shadow: 0 0 15px 5px rgba(255,100,180.6);
 }
 
 .cat-buttons {
@@ -50,15 +50,20 @@
   cursor: pointer;
   height: 48px;
   width: 138px;
-  transition: all 0.3s;
+  transition: all 100ms;
   user-select: none;
 }
 
 .cat-button:active {
   user-select: none;
-  box-shadow: 0 0 16px 6px rgba(255, 105, 180, .4);
+  background-color: #ff60af;
+  box-shadow: 0 0 16px 10px rgba(255, 105, 180, .4);
   transform: scale(.95);
 }
+
+.loading-img {
+  width: 156px;
+} 
 
 @media screen and (min-width: 1367px) {
   .cat-button {

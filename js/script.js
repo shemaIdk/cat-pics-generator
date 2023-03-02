@@ -1,22 +1,15 @@
 const API_URL = `https://api.thecatapi.com/v1/images/search`
-const LOADING_SVG_PATH = './assets/images/loading.png';
-
-let isLoading = false;
+const LOADING_SVG_PATH = '../assets/images/loading.png';
 
 const generateCatButton = document.querySelector('.cat-img-generate');
 generateCatButton.addEventListener('click', generateCat);
 
 const catImg = document.querySelector('.cat-img');
+catImg.onload = stopLoading;
 
-catImg.onload = function(){
-	if(!isLoading) {
-		this.style.boxShadow = '0 0 15px 5px rgba(255,100,180.5)';
-		this.style.border = '1px solid #ff69b4';
-	} 
-}
+const loadingImg = document.querySelector('.loading-img');
 
 function showCat(imageUrl) {
-	stopLoading();
 	catImg.src = imageUrl;
 
 	const openImageButton = document.querySelector('.cat-img-download');
@@ -41,19 +34,19 @@ async function getCat() {
 		console.log(error);
 		return getCat();
 	}
-	
 }
 
 function startLoading() {
-	isLoading = true;
-	catImg.style.border = 'none';
-	catImg.style.boxShadow = 'none';
-	catImg.src = LOADING_SVG_PATH;
+	catImg.style.display = 'none';
+	loadingImg.style.display = 'block';
+	loadingImg.src = LOADING_SVG_PATH; // update animation image;
+
 	generateCatButton.setAttribute('disabled', 'true');
 }
 
 function stopLoading() {
-	isLoading = false;
+	catImg.style.display = 'block';
+	loadingImg.style.display = 'none';
 	generateCatButton.removeAttribute('disabled');
 }
 

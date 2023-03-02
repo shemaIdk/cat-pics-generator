@@ -74,6 +74,7 @@ a {
   }
   .socials {
     justify-content: center; 
+    padding-right: 0px;
   }
   .socials__link-icon {
     width: 46px;
