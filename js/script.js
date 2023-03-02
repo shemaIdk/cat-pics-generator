@@ -1,5 +1,5 @@
 const API_URL = `https://api.thecatapi.com/v1/images/search`
-const LOADING_SVG_PATH = '../assets/images/loading.png';
+const LOADING_SVG_PATH = './assets/images/loading.png';
 
 const generateCatButton = document.querySelector('.cat-img-generate');
 generateCatButton.addEventListener('click', generateCat);
